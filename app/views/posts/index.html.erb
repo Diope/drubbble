@@ -1,0 +1,19 @@
+<% @post.each do |post| %>
+<div class="cards">
+  <div class="card">
+    <div class="card-image">
+      <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png" alt="">
+    </div>
+    <div class="card-header">
+      <%= post.title %>
+    </div>
+
+    <div class="card-copy">
+      <%= link_to post.user.email, "#" %>
+    </div>
+
+
+  </div>
+</div>
+
+<% end %>

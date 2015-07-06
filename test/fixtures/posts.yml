@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: "Phresh off the runaway"
+  content: "I see your walk"
+  created_at: <%= 10.minutes.ago %>
+
+two:
+  title: "Birthday Cake"
+  content: "It's not even my birthday"
+  created_at: <%= 3.years.ago %>
+
+three:
+  title: "BBHMM"
+  content: "Bitch better have my money"
+  created_at: <%= 2.hours.ago %>
+
+four:
+  title: "Beautiful"
+  content: "Like diamonds in the sky"
+  created_at: <%= Time.zone.now %>

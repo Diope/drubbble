@@ -1,0 +1,16 @@
+<%= <%= form_for(@post) do |f| %>
+  <%= if @post.errors.any? %>
+  <h3><%= pluralize(@post.errors.count, "Error") %> Prevents this drubbble from being saved. </h3>
+
+  <ul>
+    <% @post.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= f.text_field :title %>
+<%= f.text_field :content, as: :text %>
+<%= f.submit "Shoot" %>
+
+<% end %>
