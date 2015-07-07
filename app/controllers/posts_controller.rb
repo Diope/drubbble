@@ -2,7 +2,11 @@ class PostsController < ApplicationController
   before_action :find_post, only: [:show, :edit, :update, :destroy]
 
   def index
-    @post = Post.all.order("created_at DESC")
+    if params[:search]
+      @post = Post.search(params[:search])
+    else
+      @post = Post.all
+    end
   end
 
   def show
@@ -13,8 +17,9 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new(post_params)
+    @post = current_user.posts.build(post_params)
     if @post.save
+      flash.now[:success] = "Your drubbble shot has been posted!"
       redirect_to @post
     else
       render 'new'

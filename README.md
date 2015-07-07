@@ -10,13 +10,20 @@ I'm going to try to add as much as I can to mimic dribbble, this README will ser
 ## Changelog
 
 #### Users
-* ~~Utilize Devise in lieu of own authorization to speed up development.~~
-* Try using enums for roles
-* Add profile model to keep app specific user info separate from user model.
+* Utilize Devise in lieu of own authorization to speed up development.
+
 
 #### Posts
-* ~~Added "posts" controller and model with has_one, belongs_to association (user foreign key)~~
-* Add column for images, add carrierwave/imagemagick gem for image handling.
+* Added "posts" controller and model with has_one, belongs_to association (user foreign key)
+* Added the ability to do full text search (can currently search for title, or content).
+* Added column for images, add carrierwave/imagemagick gem for image handling.
+* Editing and destroying posts has been added.
+
 
 #### Design
 * General front end design utilizing [Bourbon](http://bourbon.io/), [Neat](http://neat.bourbon.io/), and [Bitters](http://bitters.bourbon.io/)
+* Cleaned up design a bit, added new button mixins.
+
+
+#### Utilities
+* Added TDD stack usingl Unit Testing, Minitest and Guard.

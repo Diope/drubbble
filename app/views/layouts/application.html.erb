@@ -3,10 +3,16 @@
 <%= render 'layouts/head' %>
 <body>
   <%= render 'layouts/navigation' %>
-  <div class="container">
-    <%= render 'layouts/flash' %>
-    <%= yield %>
+  <div class="row-wrapper">
+    <div class="container">
+      <%= render 'layouts/flash' %>
+      <%= yield %>
+    </div>
   </div>
+  <!--Hello, again. Friend of a friend, I knew you when...
+  I come and go, was waiting for the world to end.
+  Now that the truth is just a rule that you can bend.-->
 
+<%= render 'layouts/_footer' %>
 </body>
 </html>

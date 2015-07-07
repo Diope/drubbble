@@ -3,24 +3,29 @@
   @include flex-wrap(wrap);
   @include justify-content(space-between);
   @include span-columns(3);
-  //@include omega (4n);
+  @include omega(4n);
 }
 
 .card {
+  ///////////////////////////////////////////////////////////////////////////////////
   $base-border-color: gainsboro !default;
   $base-border-radius: 3px !default;
   $base-background-color: white !default;
   $base-spacing: 1.5em !default;
-  $action-color: #477DCA !default;
+  $base-accent-color: #477DCA !default;
+  $base-link-color: $base-accent-color !default;
   $dark-gray: #333 !default;
   $base-font-color: $dark-gray !default;
+  //////////////////////////////////////////////////////////////////////////////////
+
   $card-border-color: $base-border-color;
   $card-border: 1px solid $card-border-color;
   $card-background: lighten($card-border-color, 10%);
   $card-header-background: $card-background;
+  $card-hover-background: lighten($card-background, 5%);
+  $card-image-background: #DBD199;
+  $card-image-hover-background: lighten($card-image-background, 5%);
   $card-margin: 1em;
-  $card-image-hover-opacity: 0.7;
-  $card-image-hover-color: #F8F2B4;
 
   @include flex-basis(15em);
   @include flex-grow(1);
@@ -32,20 +37,18 @@
   cursor: pointer;
   margin: 0 $card-margin $base-spacing $card-margin;
   position: relative;
-
+  position: relative;
 
   .card-image {
     overflow: hidden;
-    height: 150px;
     max-height: 150px;
-    background-color: $card-image-hover-color;
 
     img {
       @include transition (all 0.2s ease-in-out);
+      background: $card-image-background;
       border-top-left-radius: $base-border-radius;
       border-top-right-radius: $base-border-radius;
       width: 100%;
-      opacity: 1;
     }
   }
 
@@ -71,10 +74,14 @@
 
   &:focus,
   &:hover {
-    cursor: pointer;
+    background-color: $card-hover-background;
 
-    img {
-      opacity: $card-image-hover-opacity;
+    .card-image img {
+      background: $card-image-hover-background;
+    }
+
+    .card-header {
+      background-color: $card-hover-background;
     }
   }
 

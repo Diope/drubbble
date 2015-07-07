@@ -1,0 +1,27 @@
+.row-wrapper {
+  background-color: #EFEFEF;
+}
+
+.container {
+  @include outer-container;
+  padding-top: 15px;
+  padding-bottom: 30px;
+  background-color: inherit;
+}
+
+body {
+  margin: 0 0 0 0;
+}
+
+fieldset img {
+  text-align: center;
+}
+
+.footer-2 {
+  margin: 0 0 0 0;
+}
+
+.card_head h1 {
+  font-size: 2.5vmin;
+  margin-bottom: 1.5px;
+}
