@@ -26,4 +26,10 @@ I'm going to try to add as much as I can to mimic dribbble, this README will ser
 
 
 #### Utilities
-* Added TDD stack usingl Unit Testing, Minitest and Guard.
+* Added TDD stack using Unit Testing, Minitest and Guard.
+
+## TODO
+* Add comments via route nesting
+* Add tags
+* Add user profile
+* Add enums to handle roles
