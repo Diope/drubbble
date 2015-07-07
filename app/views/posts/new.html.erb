@@ -1,9 +1,5 @@
-<%= form_for(@post) do |f| %>
-  <%= render "shared/error_messages" %>
-  <%= f.text_field :title %>
-  <%= f.text_field :content %>
-  <%= f.submit "Post Shot" %>
+<h1>Create New Post</h1>
 
-<% end %>
+<%= render "form" %>
 
 <%= link_to "Back", posts_path %>

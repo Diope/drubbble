@@ -1,3 +1,4 @@
+<script src="app/assets/javascripts/characterCount.js"></script>
 <%= form_for @post do |f| %>
 	<% if @post.errors.any? %>
 		<h3><%= pluralize(@post.errors.count, "Error") %> Prevents this post from being saved</h3>
