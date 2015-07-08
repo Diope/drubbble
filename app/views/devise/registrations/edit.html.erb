@@ -5,12 +5,20 @@
 
   <div class="field">
     <%= f.label :username %>
+<<<<<<< HEAD
     <%= f.text_field :usernamem autofocus: true %>
+=======
+    <%= f.text_field :username, autofocus: true %>
+>>>>>>> add_username
   </div>
 
   <div class="field">
     <%= f.label :email %><br />
+<<<<<<< HEAD
     <%= f.email_field :email, autofocus: "off" %>
+=======
+    <%= f.email_field :email %>
+>>>>>>> add_username
   </div>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
