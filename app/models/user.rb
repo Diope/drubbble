@@ -1,9 +1,5 @@
 class User < ActiveRecord::Base
-  enum role: [
-    :bench_warmer,
-    :pro,
-    :admin
-  ]
+  
 
   attr_accessor :login
   # Include default devise modules. Others available are:
