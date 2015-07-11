@@ -1,7 +1,13 @@
 require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+
+  def setup
+    @user = users(:tinashe)
+  end
+
+  test "Username should not be blank" do
+    @user.email = nil
+    assert_not @user.valid?
+  end
 end

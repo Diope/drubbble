@@ -24,5 +24,5 @@ class PostTest < ActiveSupport::TestCase
     @post.content = "a" * 141
     assert_not @post.valid?
   end
-
+  
 end

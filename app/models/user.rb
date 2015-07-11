@@ -1,4 +1,10 @@
 class User < ActiveRecord::Base
+  enum role: [
+    :bench_warmer,
+    :pro,
+    :admin
+  ]
+
   attr_accessor :login
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
@@ -6,9 +12,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :posts
-<<<<<<< HEAD
-  validates_presence_of :username
-=======
+
   validates :username, presence: true, uniqueness: true
 
   def self.find_for_database_authentication(warden_conditions)
@@ -19,5 +23,4 @@ class User < ActiveRecord::Base
         where(conditions.to_h).first
       end
     end
->>>>>>> add_username
 end
