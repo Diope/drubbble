@@ -280,13 +280,14 @@ header.navigation {
   }
 
   .sign-up {
-    @include button(flat, $base-accent-color);
-    display: inline;
-    float: right;
-    font-size: 0.8em;
-    margin-top: 1em;
-    padding: 0.75em 1em;
-    text-transform: uppercase;
+    //@include button(flat, $base-accent-color);
+    display: block;
+    line-height: $navigation-height;
+    float: left;
+    //font-size: 0.8em;
+    margin: 0 auto;
+    //padding: 0.75em 1em;
+    text-transform: capitalize;
   }
 
   // Search bar
@@ -296,7 +297,7 @@ header.navigation {
     $search-bar-border: 1px solid $search-bar-border-color;
     $search-bar-background: lighten($search-bar-border-color, 10%);
 
-    float: left;
+    float: right;
     padding: 0.85em 0.6em 0.7em 0.6em;
     width: 60%;
 

@@ -5,20 +5,28 @@
       <ul id="js-navigation-menu" class="navigation-menu show">
         <li class="nav-link"><%= link_to "Home", root_path %></li>
         <li class="nav-link"><%= link_to "About Us", "#" %></li>
+      </ul>
+    </nav>
+
+    <div class="navigation-tools">
+      <div class="sign-up">
+        <ul id="js-navigation-menu" class="navigation-menu show">
         <% if user_signed_in? %>
-          <li class="nav-link more"><%= link_to "#{current_user.email}", "#" %>
+          <li class="nav-link more"><%= link_to "#{current_user.username}", "#" %>
             <ul class="submenu">
+              <% if current_user.admin? %>
+                <li><%= link_to "All Users", users_path %></li>
+              <% end %>
               <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
               <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
             </ul>
           <li class="nav-link"><%= link_to "Create New Shot", new_post_path, class: "button" %></li>
         <% else %>
-            <li class="nav-link"><%= link_to "Sign In", new_user_session_path %></li>
+            <li class="nav-link"><%= link_to "Sign Up", new_user_registration_path %></li>
         <% end %>
-          </li>
       </ul>
-    </nav>
-    <div class="navigation-tools">
+    </div>
+    
       <div class="search-bar">
         <%= form_tag '/posts', method: :get, role: "search" do %>
           <%= text_field_tag(
