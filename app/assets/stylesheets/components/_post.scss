@@ -4,10 +4,47 @@
   margin-bottom: 2rem;
 	img {
 		width: 100%;
+		max-width: 900px;
     border: 1px solid #C2C2C2;
 		border-radius: .5rem;
 	}
 }
+
 .card_head {
-  margin-bottom: 2rem;
+	margin-bottom: 2rem;
+	h1 {
+  font-size: 3vmin;
+  margin-bottom: 1.5px;
+	}
+}
+
+.post_content {
+	padding-bottom: 4rem;
+}
+
+.response {
+	hr {
+	border: 1.5px solid #C2C2C2;
+	margin-top: 3px;
+	}
+
+	h2 {
+		font-size: 2.0vmin;
+		margin-bottom: 0;
+		color: #333333;
+	}
+}
+//Comments
+.comments {
+	small {
+		color: #999999;
+		font-weight: 500;
+	}
+	h3 {
+		margin-bottom: 2px;
+	}
+	p{
+		margin-bottom: 8px;
+	}
+
 }

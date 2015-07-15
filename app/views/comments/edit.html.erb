@@ -1,0 +1,6 @@
+<h2>Edit Reply</h2>
+
+<%= form_for ([@post, @comment]) do |f| %>
+  <%= f.text_area :content %>
+  <%= f.submit "Update Reply" %>
+<% end %>

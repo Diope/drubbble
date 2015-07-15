@@ -1,13 +1,22 @@
 <div class="card_head">
     <h1><%= @post.title %></h1>
-    <small>by <%= @post.user.email %> | </small> <% if @post.user %><%= link_to "Edit", edit_post_path %><% end %>
+    <small>by <%= @post.user.username %> | </small> <% if @post.user %><%= link_to "Edit", edit_post_path %><% end %>
 </div>
+
 <div class="post_image">
   <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png" alt="">
 </div>
 
-
+<div class="post_content">
   <p>
     <%= @post.content %>
   </p>
+</div>
+
+<div class="response">
+  <h2><%= pluralize(@post.comments.count, "Response") %></h2>
   <hr>
+</div>
+
+  <%= render @post.comments %>
+  <%= render "comments/form" %>

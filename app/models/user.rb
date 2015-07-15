@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  after_initialize :set_default_role, :if => :new_record?
 
   attr_accessor :login
   # Include default devise modules. Others available are:
@@ -9,11 +10,11 @@ class User < ActiveRecord::Base
   validates :username, presence: true, uniqueness: true
 
   #-----------
-  enum role: [ :rookie, :pro, :admin ]
-  after_initialize :set_default_role, :if => :new_record?
+  enum role: [ :rookie, :admin ]
 
   #-----------
   has_many :posts
+  has_many :comments
 
   #-----------
 
