@@ -22,6 +22,7 @@
             </ul>
           <li class="nav-link"><%= link_to "Create New Shot", new_post_path, class: "button" %></li>
         <% else %>
+            <li class="nav-link"><%= link_to "Sign In", new_user_session_path %></li>
             <li class="nav-link"><%= link_to "Sign Up", new_user_registration_path %></li>
         <% end %>
       </ul>
@@ -32,7 +33,7 @@
           <%= text_field_tag(
               :search,
               params[:search],
-              placeholder: "Enter Search",
+              placeholder: "Search",
           ) %>
         <% end %>
       </div>

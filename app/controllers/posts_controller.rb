@@ -30,9 +30,14 @@ class PostsController < ApplicationController
   end
 
   def update
-    @post.update_attributes(post_params)
-    flash.now[:success] = "Your drubbble post has been updated"
-    redirect_to @post
+    if @post.user == current_user
+      @post.update_attributes(post_params)
+      redirect_to @post
+      flash[:success] = "Your drubbble post has been updated."
+    else
+      redirect_to @post
+      flash[:error] = "Sorry, you cannot edit another user's post."
+    end
   end
 
   def destroy
