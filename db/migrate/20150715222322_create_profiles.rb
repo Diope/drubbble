@@ -1,0 +1,12 @@
+class CreateProfiles < ActiveRecord::Migration
+  def change
+    create_table :profiles do |t|
+      t.string :tagline
+      t.string :website
+      t.integer :age
+      t.references :user, index: true, foreign_key: true
+
+      t.timestamps null: false
+    end
+  end
+end

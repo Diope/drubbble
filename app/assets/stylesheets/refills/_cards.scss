@@ -1,15 +1,16 @@
 .cards {
-  @include display(flex);
-  @include flex-wrap(wrap);
-  @include justify-content(space-between);
+  //@include display(flex);
+  //@include flex-wrap(wrap);
+  //@include justify-content(space-between);
   @include span-columns(3);
   @include omega(4n);
+  margin-bottom: 1.5em;
 }
 
 .card {
   ///////////////////////////////////////////////////////////////////////////////////
   $base-border-color: gainsboro !default;
-  $base-border-radius: 3px !default;
+  $base-border-radius: 4px !default;
   $base-background-color: white !default;
   $base-spacing: 1.5em !default;
   $base-accent-color: #477DCA !default;
@@ -35,19 +36,16 @@
   border: $card-border;
   box-shadow: 0 2px 4px darken($base-background-color, 10%);
   cursor: pointer;
-  margin: 0 $card-margin $base-spacing $card-margin;
   position: relative;
   position: relative;
 
   .card-image {
-    overflow: hidden;
     max-height: 150px;
+    padding: .5em .5em 0 .5em;
 
     img {
       @include transition (all 0.2s ease-in-out);
       background: $card-image-background;
-      border-top-left-radius: $base-border-radius;
-      border-top-right-radius: $base-border-radius;
       width: 100%;
     }
   }
@@ -57,13 +55,17 @@
     background-color: $card-header-background;
     border-bottom: $card-border;
     border-radius: $base-border-radius $base-border-radius 0 0;
-    font-weight: bold;
-    line-height: 1.5em;
-    padding: ($base-spacing / 3) ($base-spacing / 2);
+    font-weight: 500;
+    font-size: .8em;
+    text-align: right;
+    color: #BBBBBB;
+    line-height: 1em;
+    padding: .2em ($base-spacing / 2) .5em ($base-spacing /2);
   }
 
   .card-copy {
-    font-size: 0.9em;
+    font-size: 0.8em;
+    font-weight: bold;
     line-height: 1.5em;
     padding: ($base-spacing / 2) ($base-spacing / 2);
 
@@ -92,4 +94,10 @@
       background-color: $card-background;
     }
   }
+}
+
+.card_copy {
+  padding: ($base-spacing / 2) ($base-spacing / 2);
+  font-size: .7em;
+  font-weight: bold;
 }

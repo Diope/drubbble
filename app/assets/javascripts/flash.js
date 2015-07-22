@@ -1,10 +1,7 @@
-$(document).ready(ready);
-$(document).on('page:load', ready);
-
-function clearFlashes(){
-  $(".flashes").animate({opacity:'0'}, 1500);
-}
-
-var ready = function() {
-   setTimeout(clearFlashes, 1000);  //Flash fade
- };
+$(document).ready(function(){
+  setTimeout(function(){
+    $('.flashes').fadeOut("slow", function(){
+      $(this).remove();
+    })
+  }, 2500);
+});

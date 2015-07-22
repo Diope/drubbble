@@ -1,16 +1,25 @@
 .row-wrapper {
+  //@include fill-parent();
   background-color: #EFEFEF;
+  //height: 100%;
 }
 
 .container {
   @include outer-container;
-  padding-top: 15px;
+  padding-top: 35px;
   padding-bottom: 30px;
   background-color: inherit;
 }
 
+.post_title {
+  h1 {
+    text-align: center;
+  }
+}
+
 body {
   margin: 0 0 0 0;
+  background-color: #EFEFEF;
 }
 
 fieldset img {
@@ -18,7 +27,8 @@ fieldset img {
 }
 
 .footer-2 {
-  margin: 0 0 0 0;
+  //height: 20%
+  //margin: 0 0 0 0;
 }
 
 .search-bar {

@@ -1,7 +1,8 @@
 <div class="comment_area">
-  <%= form_for ([@post, @post.comments.build]) do |f| %>
-    <%= f.text_area :content, rows: 6 %>
+  <%= form_for([@post, @post.comments.build], remote: true) do |f| %>
+    <%= f.text_area :content, rows: 6, placeholder: "Add A Comment..." %>
     <%= f.submit "Reply" %>
 
-  <% end %>
+    <% end %>
+
 </div>

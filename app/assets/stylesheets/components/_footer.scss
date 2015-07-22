@@ -1,30 +1,30 @@
 // Uncomment this for a sticky footer.
 //
-// .wrapper-for-content-outside-of-footer {
-//   min-height: 100%;
-//   height: auto !important;
-//   height: 100%;
-//   margin: 0 auto -4em;
-// }
+.wrapper-for-content-outside-of-footer {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -4em;
+}
 
-// html, body {
-//  height: 100%;
-// }
+html, body {
+ height: 100%;
+}
 
-// .wrapper-for-content-outside-of-footer:after {
-//   content: "";
-//   display: block;
-// }
+.wrapper-for-content-outside-of-footer:after {
+  content: "";
+  display: block;
+}
 
-// .footer-2, .wrapper-for-content-outside-of-footer:after {
-//   height: 17em;
+.footer, .wrapper-for-content-outside-of-footer:after {
+  height: 17em;
 
-//   @include media($large-screen) {
-//     height: 4em;
-//   }
-// }
+  @include media($large-screen) {
+    height: 4em;
+  }
+}
 
-.footer-2 {
+.footer {
   $base-spacing: 1.5em !default;
   $action-color: #477DCA !default;
   $medium-screen: em(640) !default;
@@ -74,7 +74,7 @@
 
     @include media($large-screen) {
       display: inline;
-      text-align: left;
+      text-align: center;
     }
   }
 

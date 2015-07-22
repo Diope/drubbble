@@ -1,5 +1,6 @@
 class CommentsController < ApplicationController
   before_action :authenticate_user!
+  before_action :set_post
 
   def new
     @post = Post.new
@@ -7,12 +8,14 @@ class CommentsController < ApplicationController
   end
 
   def create
-    @post = find_post
-    @comment = @post.comments.create(comment_params)
+    @comment = @post.comments.build(comment_params)
     @comment.user_id = current_user.id
     @comment.save
     if @comment.save
-      redirect_to @post
+      respond_to do |format|
+        format.html { redirect_to @post }
+        format.js
+      end
     else
       redirect_to @post
       flash[:error] = "You cannot submit blank data"
@@ -20,12 +23,10 @@ class CommentsController < ApplicationController
   end
 
   def edit
-    @post = find_post
     @comment = @post.comments.find(params[:id])
   end
 
   def update
-      @post = find_post
       @comment = @post.comments.find(params[:id])
       if @comment.user_id == current_user.id
         @comment.update_attributes(comment_params)
@@ -45,7 +46,7 @@ class CommentsController < ApplicationController
       params.require(:comment).permit(:content)
     end
 
-    def find_post
+    def set_post
       @post = Post.find(params[:post_id])
     end
 

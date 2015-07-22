@@ -1,7 +1,12 @@
 <div class="comments">
-  <h3><%= comment.user.username %></h3>
-  <p><%= comment.content %><p>
-  <small><%= time_ago_in_words(comment.created_at) %> ago </small>
-  <%= link_to "Edit", edit_post_comment_path(comment.post, comment ) %>
+  <h3><%= link_to "#{comment.user.username}", profile_path(comment.user) %></h3>
+  <%= simple_format(comment.content) %>
+  <small>Posted <%= time_ago_in_words(comment.created_at) %> ago</small>
+
+  <% if comment.created_at != comment.updated_at %>
+    <small>| Edited <%= time_ago_in_words(comment.updated_at) %> ago</small>
+  <% end %>
+
+  <small><% if comment.user == current_user %>| <%= link_to "Edit", edit_post_comment_path(comment.post, comment ) %><% end %></small>
   <hr>
 </div>

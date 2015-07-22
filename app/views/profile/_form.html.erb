@@ -1,0 +1,18 @@
+<%= form_for @profile do |f| %>
+	<% if @profile.errors.any? %>
+		<h3><%= pluralize(@profile.errors.count, "Error") %> Prevents your profile from being updated</h3>
+
+		<ul>
+			<% @pprofile.errors.full_messages.each do |msg| %>
+			<li><%= msg %></li>
+			<% end %>
+		</ul>
+	<% end %>
+  <%= f.text_field :tagline, placeholder: "Your Tagline", autofocus: true %>
+  <%= f.text_field :location, placeholder: "Location" %>
+  <%= f.text_field :website, placeholder: "Website" %>
+	<%= f.label :available, "For Hire?" %><%= f.check_box :available %>
+
+  <%= f.submit "Update Profile" %>
+
+<% end %>

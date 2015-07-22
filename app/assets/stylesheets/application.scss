@@ -2,12 +2,14 @@
 @import "base/grid-settings";
 @import "neat";
 @import "base/base";
+@import "font-awesome";
 
 @import "components/navigation";
 @import "components/footer";
 @import "components/post";
 @import "components/comments";
 @import "components/flash";
+@import "components/profile";
 
 @import "refills/cards";
 @import "overrides";

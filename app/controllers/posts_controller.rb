@@ -1,11 +1,11 @@
 class PostsController < ApplicationController
-  before_action :find_post, only: [:show, :edit, :update, :destroy]
+  before_action :find_post, except: [:new, :index, :create]
 
   def index
     if params[:search]
       @post = Post.search(params[:search])
     else
-      @post = Post.all
+      @post = Post.all.desc_order
     end
   end
 

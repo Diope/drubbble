@@ -3,16 +3,16 @@
 <%= render 'layouts/head' %>
 <body>
   <%= render 'layouts/navigation' %>
-  <div class="row-wrapper">
-    <div class="container">
-      <%= render "application/flashes" -%>
-      <%= yield %>
-    </div>
-  </div>
   <!--Hello, again. Friend of a friend, I knew you when...
   I come and go, was waiting for the world to end.
   Now that the truth is just a rule that you can bend.-->
+  <div class="row-wrapper">
+    <%= render "application/flashes" -%>
+    <div class="container">
+      <%= yield %>
+    </div>
+    <%= render 'layouts/_footer' %>
+  </div>
 
-<%= render 'layouts/_footer' %>
 </body>
 </html>

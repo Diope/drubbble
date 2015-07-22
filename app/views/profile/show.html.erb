@@ -1,0 +1,23 @@
+<div class="profile_head">
+  <h1><%= "#{@profile.user.username}" %></h1>
+  <h2> <%= @user.profile.tagline %></h2>
+  <span><%= fa_icon "map-marker" %><%= @user.profile.location %></span>
+  <span><%= fa_icon "globe" %><%= @user.profile.website %></span>
+  <span><% if @user.profile.available? %><%= fa_icon "envelope" %>Hire Me!<% end %></span>
+</div>
+<hr>
+
+<div class="profile_posts">
+  <% @user.posts.each do |post| %>
+      <div class="cards">
+        <div class="card">
+          <div class="card-image">
+            <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png" alt="">
+          </div>
+          <div class="card-header">
+            temp stuff here
+          </div>
+        </div>
+      </div>
+  <% end %>
+</div>

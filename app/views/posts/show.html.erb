@@ -1,6 +1,6 @@
 <div class="card_head">
     <h1><%= @post.title %></h1>
-    <small>by <%= @post.user.username %> | </small> <% if @post.user %><%= link_to "Edit", edit_post_path %><% end %>
+    <small>by <%= link_to "#{@post.user.username}", profile_path(@post.user) %> <%= @post.created_at.strftime('%b %d, %Y') %></small> <% if @post.user == current_user %>| <%= link_to "Edit", edit_post_path %><% end %>
 </div>
 
 <div class="post_image">
@@ -19,4 +19,6 @@
 </div>
 
   <%= render @post.comments %>
-  <%= render "comments/form" %>
+  <% if user_signed_in? %>
+    <%= render "comments/form" %>
+  <% end %>
