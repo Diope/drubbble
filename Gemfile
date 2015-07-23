@@ -17,6 +17,7 @@ gem 'refills'
 gem 'carrierwave', '~> 0.10.0'
 gem 'thin', '~> 1.6.3'
 gem 'font-awesome-rails', '~> 4.3.0.0'
+gem 'will_paginate', '~> 3.0.7'
 
 group :development, :test do
   gem 'byebug'

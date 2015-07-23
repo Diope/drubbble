@@ -5,7 +5,7 @@ class PostsController < ApplicationController
     if params[:search]
       @post = Post.search(params[:search])
     else
-      @post = Post.all.desc_order
+      @post = Post.all.desc_order.page(params[:page])
     end
   end
 

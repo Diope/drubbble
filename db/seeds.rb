@@ -6,7 +6,7 @@ User.create!(username: "TaxBronze",
 
 50.times do |n|
   name = Faker::Internet.user_name
-  email = "test_user_#{n+1}@example.com"
+  email = Faker::Internet.email
   password = "password"
   User.create!(username: name,
                 email: email,
@@ -14,12 +14,16 @@ User.create!(username: "TaxBronze",
                 password_confirmation: password)
 end
 
-users = User.order(:created_at).take(10)
+users = User.order(:created_at).take(3)
 50.times do
   title = Faker::Lorem.word
   content = Faker::Lorem.paragraph(2)
+  location = Faker::Address.city
+  website = Faker::Internet.url
+  tagline = Faker::Hacker.say_something_smart
   users.each do |user|
     user.posts.create!(title: title, content: content)
+    user.profile.update_attributes(tagline: tagline, location: location, website: website )
   end
 end
 

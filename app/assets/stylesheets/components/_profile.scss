@@ -1,9 +1,10 @@
 .followers {
+  @include span-columns(12);
   width: 100%;
   text-align: center;
   color: #787878;
   margin-bottom: 5px;
-  font-size: 1.5vmin;
+  font-size: 0.9rem;
   span {
     margin: 0 3px;
   }
@@ -12,11 +13,11 @@
 .profile_head {
   text-align: center;
   h1 {
-    font-size: 2.5vmin;
+    font-size: 1.5rem;
   }
   h2 {
     color: #787878;
-    font-size: 2.5vmin;
+    font-size: 1.7rem;
     margin-bottom: 10px;
     font-weight: normal;
   }
