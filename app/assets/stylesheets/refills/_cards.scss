@@ -30,7 +30,7 @@
 
   @include flex-basis(15em);
   @include flex-grow(1);
-  @include transition (all 0.2s ease-in-out);
+  //@include transition (all 0.2s ease-in-out);
   background-color: $card-background;
   border-radius: $base-border-radius;
   border: $card-border;
@@ -53,6 +53,18 @@
   .card-header {
     @include transition (all 0.2s ease-in-out);
     background-color: $card-header-background;
+    border-radius: $base-border-radius $base-border-radius 0 0;
+    font-weight: 500;
+    font-size: .8em;
+    text-align: center;
+    color: #BBBBBB;
+    line-height: .1em;
+    padding: 1em 0 0 0;
+  }
+
+  .card-bottom {
+    @include transition (all 0.2s ease-in-out);
+    background-color: $card-header-background;
     border-bottom: $card-border;
     border-radius: $base-border-radius $base-border-radius 0 0;
     font-weight: 500;
@@ -61,17 +73,6 @@
     color: #BBBBBB;
     line-height: 1em;
     padding: .2em ($base-spacing / 2) .5em ($base-spacing /2);
-  }
-
-  .card-copy {
-    font-size: 0.8em;
-    font-weight: bold;
-    line-height: 1.5em;
-    padding: ($base-spacing / 2) ($base-spacing / 2);
-
-    p {
-      margin: 0 0 ($base-spacing / 2);
-    }
   }
 
   &:focus,

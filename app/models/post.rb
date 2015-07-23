@@ -14,6 +14,7 @@ class Post < ActiveRecord::Base
   validates_presence_of :user_id
   validates :title, :content, presence: true
   validates_length_of :content, minimum: 1, maximum: 600
+  validates_length_of :title, minimum: 1, maximum: 50
   scope :desc_order, -> { order("created_at DESC") }
 
   belongs_to :user

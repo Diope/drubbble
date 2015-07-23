@@ -1,0 +1,6 @@
+<div class="followers">
+  <span><a href="<%= profile_path(@user) %>">
+    <b><%= @user.posts.count %></b> <%= "Shot".pluralize(@user.posts.count) %></a></span>
+  <span><a href="<%= followers_user_path(@user) %>">
+    <b><%= @user.followers.count %></b> <%= "Follower".pluralize(@user.followers.count) %></a></span>
+</div>

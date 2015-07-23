@@ -1,3 +1,5 @@
+<%= render "followers" %>
+
 <div class="profile_head">
   <h1><%= "#{@profile.user.username}" %></h1>
   <h2> <%= @user.profile.tagline %></h2>
@@ -11,10 +13,15 @@
   <% @user.posts.each do |post| %>
       <div class="cards">
         <div class="card">
-          <div class="card-image">
-            <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png" alt="">
-          </div>
           <div class="card-header">
+            <%= truncate(post.title, length: 23) %>
+          </div>
+          <div class="card-image">
+            <a href="<%= post_path(post) %>">
+              <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png" alt="">
+            </a>
+          </div>
+          <div class="card-bottom">
             temp stuff here
           </div>
         </div>
