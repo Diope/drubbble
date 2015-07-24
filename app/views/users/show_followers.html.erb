@@ -1,11 +1,11 @@
 <div class="follower_header">
   <h1><%= link_to "#{@user.username}", profile_path(@user.profile) %> / Followers</h1>
-</div>
 
   <div class="header">
-    <%= pluralize(@user.followers.count, 'Follower') %>
+    <h2><%= pluralize(@user.followers.count, 'Follower') %></h2>
     <hr>
   </div>
+</div>
 
 <ol class="follower_wrapper">
 <% @user.followers.each do |follower| %>
@@ -15,8 +15,8 @@
         <h3><%= link_to "#{follower.username}", profile_path(follower) %></h3>
         <span><%= follower.profile.location %><span>
         <ul class="follower_stats_group">
-          <li class="stats_shots"><%= follower.posts.count %><br> <%= "Shot".pluralize(follower.posts.count) %></li>
-          <li class="stats_followers"> <%= follower.followers.count %><br> <%= "Follower".pluralize(follower.followers.count) %></li>
+          <li class="stats_shots"><a href="<%= profile_path(follower) %>"><%= follower.posts.count %><br> <%= "Shot".pluralize(follower.posts.count) %></a></li>
+          <li class="stats_followers"><a href="<%= followers_user_path(follower) %>"><%= follower.followers.count %><br> <%= "Follower".pluralize(follower.followers.count) %></a></li>
         </ul>
       </h2>
     </div>
