@@ -1,0 +1,31 @@
+<div class="follower_header">
+  <h1><%= link_to "#{@user.username}", profile_path(@user.profile) %> / Followers</h1>
+</div>
+
+  <div class="header">
+    <%= pluralize(@user.followers.count, 'Follower') %>
+    <hr>
+  </div>
+
+<ol class="follower_wrapper">
+<% @user.followers.each do |follower| %>
+<li class="follower_content">
+    <div class="follower_info">
+      <h2 class="follower_card">
+        <h3><%= link_to "#{follower.username}", profile_path(follower) %></h3>
+        <span><%= follower.profile.location %><span>
+        <ul class="follower_stats_group">
+          <li class="stats_shots"><%= follower.posts.count %><br> <%= "Shot".pluralize(follower.posts.count) %></li>
+          <li class="stats_followers"> <%= follower.followers.count %><br> <%= "Follower".pluralize(follower.followers.count) %></li>
+        </ul>
+      </h2>
+    </div>
+
+    <div class="follower_posts">
+      <% follower.posts.only_three.each do |post| %>
+        <%= link_to "#{post.title}", post_path(post) %>
+      <% end %>
+    </div>
+    <% end %>
+  </li>
+</ol>

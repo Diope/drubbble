@@ -1,8 +1,15 @@
 class UsersController < ApplicationController
-  before_action :authenticate_user!
-  def index
+
+  def followers
+    @title = "Followers"
+    @user = User.find(params[:id])
+    @users = @user.followers.page(params[:page])
+    render "show_followers"
   end
 
-  def show
+  def following
+    @title = "Following"
+    @user = User.find(params[:id])
+    @users = @user.following.page(params[:page])
   end
 end

@@ -29,3 +29,41 @@
     margin: 0 8px 0 8px;
   }
 }
+
+li.follower_content {
+  @include fill-parent();
+  @include row(table);
+  border-bottom: 1px solid #dddddd;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  .follower_info {
+    padding-left: 0;
+    @include span-columns(6);
+    li.stats_shots {
+      display: inline-block;
+      float: left;
+    }
+    li.stats_followers {
+      display: inline-block;
+      margin-left: 9px;
+      padding-left: 9px;
+      border-left: 1px solid #cccccc;
+    }
+    span {
+      font-size: .8rem;
+    }
+    h3 {
+      margin: 0 0 0 0;
+    }
+    h2{
+      margin: 0 0 0 0;
+    }
+  }
+  .follower_posts {
+    @include span-columns(6);
+    @include reset-display;
+  }
+}
+a {
+  color: #4384A7;
+}

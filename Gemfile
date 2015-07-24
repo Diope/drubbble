@@ -24,4 +24,5 @@ group :development, :test do
   gem 'web-console', '~> 2.0'
   gem 'spring'
   gem 'faker', '~> 1.4.3'
+  gem 'pry-rails', '~> 0.3.4'
 end

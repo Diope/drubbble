@@ -16,6 +16,7 @@ class Post < ActiveRecord::Base
   validates_length_of :content, minimum: 1, maximum: 600
   validates_length_of :title, minimum: 1, maximum: 50
   scope :desc_order, -> { order("created_at DESC") }
+  scope :only_three, -> { limit(5)}
 
   belongs_to :user
   has_many :comments

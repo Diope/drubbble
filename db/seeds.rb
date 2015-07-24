@@ -14,7 +14,7 @@ User.create!(username: "TaxBronze",
                 password_confirmation: password)
 end
 
-users = User.order(:created_at).take(3)
+users = User.order(:created_at).take(50)
 50.times do
   title = Faker::Lorem.word
   content = Faker::Lorem.paragraph(2)
