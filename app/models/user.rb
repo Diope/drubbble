@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
   validates :username, presence: true, uniqueness: true
 
   #-----------
-  enum role: [ :rookie, :admin ]
+  enum role: [ :rookie, :pro, :admin ]
 
   #-----------
   has_many :posts
