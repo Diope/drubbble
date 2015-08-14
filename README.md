@@ -9,27 +9,42 @@ I'm going to try to add as much as I can to mimic dribbble, this README will ser
 
 ## Changelog
 
-#### Users
-* Utilize Devise in lieu of own authorization to speed up development.
+### August 14, 2015
+* Added a basic tagging system utilizing a join table (`has_many, through`).
+* Dropped carrierwave for paperclip and added user avatars. Still need to add validations.
+* Small bit of front end work, mostly with the avatars.
+
+### July 24, 2015
+* Added followers page
+
+### July 23, 2015
+* Added pagination
+
+### July 22nd, 2015
+* Added the ability to follow other users. Used a join table (`has_many, through`)
+* Utilized `accepts_nested_attributes_for` along with one-to-one association and `after_create: :create_profile` to create a profile page for users ontop of Devise....this took me a while to figure out.
+
+### July 14th, 2015
+* Updated navigation scss
+* Added comments (model, controller, association, routing).
+
+### July 12th, 2015
+* Added user roles via enums
+
+### July 7th, 2015
+* Added username to devise
+* Added Posts (shots)
 
 
-#### Posts
-* Added "posts" controller and model with has_one, belongs_to association (user foreign key)
-* Added the ability to do full text search (can currently search for title, or content).
-* Added column for images, add carrierwave/imagemagick gem for image handling.
-* Editing and destroying posts has been added.
+## Stack
 
+### Design
+* [Bourbon](http://bourbon.io/)
+* [Neat](http://neat.bourbon.io/)
+* [Bitters](http://bitters.bourbon.io/)
+* Paperclip
+* Fontawesome
 
-#### Design
-* General front end design utilizing [Bourbon](http://bourbon.io/), [Neat](http://neat.bourbon.io/), and [Bitters](http://bitters.bourbon.io/)
-* Cleaned up design a bit, added new button mixins.
-
-
-#### Utilities
-* Added TDD stack using Unit Testing, Minitest and Guard.
-
-## TODO
-* Add comments via route nesting
-* Add tags
-* Add user profile
-* Add enums to handle roles
+### Utilities
+* TDD stack using Unit Testing, Minitest and Guard.
+* Devise
