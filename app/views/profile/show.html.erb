@@ -1,6 +1,7 @@
 <%= render "followers" %>
 
 <div class="profile_head">
+  <%= image_tag @user.profile.avatar.url(:medium) %>
   <h1><%= "#{@profile.user.username}" %></h1>
   <h2><%= @user.profile.tagline %></h2>
   <span><% if @user.profile.location? %><%= fa_icon "map-marker" %><%= @user.profile.location %><% end %></span>

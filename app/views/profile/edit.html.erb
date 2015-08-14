@@ -1,3 +1,13 @@
-<h2><%= "Edit #{current_user.username} Profile" %></h2>
+<div class="profile_title">
+    <h1> <%= link_to "#{current_user.username}", profile_path(current_user) %> / Profile </h1>
+</div>
+
+<div class="profile_sections">
+  <ul>
+    <li><%= link_to "Profile", profile_path(current_user) %> </li>
+    <li> <%= link_to "Account Settings", edit_user_registration_path(current_user) %></li>
+  </ul>
+</div>
+<hr>
 
 <%= render "form" %>

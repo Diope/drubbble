@@ -8,10 +8,22 @@
 			<% end %>
 		</ul>
 	<% end %>
-  <%= f.text_field :tagline, placeholder: "Your Tagline", autofocus: true %>
-  <%= f.text_field :location, placeholder: "Location" %>
-  <%= f.text_field :website, placeholder: "Website" %>
-	<span><%= f.label :available, "For Hire?" %><%= f.check_box :available %></span>
+	
+	<%= f.label :avatar %>
+	<%= f.file_field :avatar %>
+
+	<%= f.label :location %>
+  <%= f.text_field :location, placeholder: "Anywhere, US" %>
+
+	<%= f.label :twitter %>
+	<%= f.text_field :twitter, placeholder: "@username" %>
+
+	<%= f.label :website %>
+  <%= f.text_field :website, placeholder: "http://" %>
+
+	<%= f.label "Bio" %>
+  <%= f.text_field :tagline %>
+	<span><%= f.check_box :available %><%= f.label :available, "For Hire?" %></span>
 
   <%= f.submit "Update Profile" %>
 

@@ -13,6 +13,12 @@
   </p>
 </div>
 
+<div class="post_tags">
+  <% @post.tags.each do |tag| %>
+    <%= link_to tag.name, tag_path(tag) %>
+  <% end %>  
+</div>
+
 <div class="response">
   <h2><%= pluralize(@post.comments.count, "Response") %></h2>
   <hr>

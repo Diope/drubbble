@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :posts do
     resources :comments
   end
+  resources :tags
 
 
   devise_for :users, :controllers => { registrations: 'registrations'}

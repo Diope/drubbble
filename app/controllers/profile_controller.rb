@@ -42,6 +42,6 @@ class ProfileController < ApplicationController
     end
 
     def profile_params
-      params.require(:profile).permit(:tagline, :location, :website, :available)
+      params.require(:profile).permit(:tagline, :location, :website, :available, :twitter, :avatar)
     end
 end

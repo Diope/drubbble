@@ -11,3 +11,9 @@
 /log/*
 !/log/.keep
 /tmp
+
+#MAC_OSX
+.DS_Store
+
+#Avatars
+/public/system

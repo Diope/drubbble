@@ -11,7 +11,11 @@
             </a>
           </div>
           <div class="card-bottom">
-            temp stuff here
+            <ul>
+              <% if post.comments.count > 0 %>
+                <li><%= fa_icon "comment" %> <%= post.comments.count %></li>
+              <% end %>
+            </ul>
           </div>
         </div>
         <div class="card_copy">

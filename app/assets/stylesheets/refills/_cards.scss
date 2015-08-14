@@ -4,7 +4,7 @@
   //@include justify-content(space-between);
   @include span-columns(3);
   @include omega(4n);
-  margin-bottom: 1.5em;
+  margin-bottom: 10px;
 }
 
 .card {
@@ -38,6 +38,7 @@
   cursor: pointer;
   position: relative;
   position: relative;
+  width: 100%;
 
   .card-image {
     max-height: 150px;
@@ -72,7 +73,7 @@
     text-align: right;
     color: #BBBBBB;
     line-height: 1em;
-    padding: .2em ($base-spacing / 2) .5em ($base-spacing /2);
+    padding: 1.5em ($base-spacing / 2) .5em ($base-spacing /2);
   }
 
   &:focus,
