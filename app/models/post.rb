@@ -37,6 +37,6 @@ class Post < ActiveRecord::Base
   has_many :taggings
   has_many :tags, through: :taggings
 
-  has_attached_file :userShot, :styles => {:large => "900x550>"}, :default_url => "/images/userShot/default_image.png"
+  has_attached_file :userShot, :styles => {:large => "900x550>"}, :default_url => "/images/userShot/default_image.jpg"
   validates_attachment_content_type :userShot, :content_type => /\Aimage\/.*\Z/
 end
