@@ -2,7 +2,7 @@ User.create!(username: "TaxBronze",
               email: "test@user.com",
               password: "password",
               password_confirmation: "password",
-              role: 1)
+              role: 2)
 
 50.times do |n|
   name = Faker::Internet.user_name
@@ -11,7 +11,8 @@ User.create!(username: "TaxBronze",
   User.create!(username: name,
                 email: email,
                 password: password,
-                password_confirmation: password)
+                password_confirmation: password,
+                role: 1)
 end
 
 users = User.order(:created_at).take(50)
