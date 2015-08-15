@@ -7,7 +7,7 @@
           </div>
           <div class="card-image">
             <a href="<%= post_path(post) %>">
-              <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png" alt="">
+              <%= image_tag post.userShot.url(:large) %>
             </a>
           </div>
           <div class="card-bottom">
@@ -19,7 +19,7 @@
           </div>
         </div>
         <div class="card_user_info">
-          <%= image_tag post.user.profile.avatar %> <%= link_to post.user.username, profile_path(post.user) %>
+          <%= image_tag post.user.profile.avatar.url(:medium), class: "small_avatar" %> <%= link_to post.user.username, profile_path(post.user) %>
         </div>
       </div>
   <% end %>

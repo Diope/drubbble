@@ -4,7 +4,7 @@
 </div>
 
 <div class="post_image">
-  <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png" alt="">
+  <%= image_tag @post.userShot %>
 </div>
 
 <div class="post_content">
@@ -16,7 +16,7 @@
 <div class="post_tags">
   <% @post.tags.each do |tag| %>
     <%= link_to tag.name, tag_path(tag) %>
-  <% end %>  
+  <% end %>
 </div>
 
 <div class="response">
