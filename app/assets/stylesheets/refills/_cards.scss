@@ -74,6 +74,7 @@
     color: #BBBBBB;
     line-height: 1em;
     padding: 1.5em ($base-spacing / 2) .5em ($base-spacing /2);
+
   }
 
   &:focus,
@@ -98,8 +99,13 @@
   }
 }
 
-.card_copy {
+.card_user_info {
   padding: ($base-spacing / 2) ($base-spacing / 2);
   font-size: .7em;
   font-weight: bold;
+  img {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+  }
 }

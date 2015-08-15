@@ -18,8 +18,8 @@
             </ul>
           </div>
         </div>
-        <div class="card_copy">
-          <%= link_to post.user.username, profile_path(post.user) %>
+        <div class="card_user_info">
+          <%= image_tag post.user.profile.avatar %> <%= link_to post.user.username, profile_path(post.user) %>
         </div>
       </div>
   <% end %>
