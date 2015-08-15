@@ -9,6 +9,11 @@ I'm going to try to add as much as I can to mimic dribbble, this README will ser
 
 ## Changelog
 
+### August 15, 2015
+* Added the ability for users to upload photos to their posts (userShot column on post model).
+* Displayed avatar on index page.
+* Added default avatar when user has not supplied avatar.
+
 ### August 14, 2015
 * Added a basic tagging system utilizing a join table (`has_many, through`).
 * Dropped carrierwave for paperclip and added user avatars. Still need to add validations.

@@ -1,5 +1,5 @@
 <div class="card_head">
-    <h1><%= @post.title %></h1>
+    <%= image_tag @post.user.profile.avatar.url(:medium), class: "medium_avatar" %><h1><%= @post.title %></h1>
     <small>by <%= link_to "#{@post.user.username}", profile_path(@post.user) %> <%= @post.created_at.strftime('%b %d, %Y') %></small> <% if @post.user == current_user %>| <%= link_to "Edit", edit_post_path %><% end %>
 </div>
 
