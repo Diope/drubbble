@@ -1,3 +1,10 @@
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
 
 .post_title {
   h1 {
@@ -6,15 +13,27 @@
 }
 
 .post_image {
-	//height: 750px;
+	@include span-columns(9 of 12);
 	overflow: hidden;
-  margin-bottom: 2rem;
+  	margin-bottom: 2rem;
 	img {
 		width: 100%;
 		max-width: 900px;
-    border: 1px solid #C2C2C2;
+    	border: 1px solid #C2C2C2;
 		border-radius: .5rem;
 	}
+}
+
+.post_wrap{
+	@include outer-container;
+}
+
+.post_wrap_inner {
+	@include span-columns(12);
+}
+
+.tagging_wrapper {
+	@include span-columns(3 of 12);
 }
 
 .card_head {
@@ -27,6 +46,27 @@
 		font-weight: 500;
 		font-size: .9em;
 		color: #989898;
+	}
+}
+
+
+
+.post_tag{
+	padding: 0 3px 2.5px;
+	margin-right: 4px;
+	background-color: #E9E9E9;
+	display: inline-block;
+	border-radius: 4px;
+	border: 1px solid #BAB6B6;
+	line-height: 80%;
+	a {
+		font-size: 12px;
+		text-decoration: none;
+		white-space: nowrap;
+		position: relative;
+  		top: 50%;
+  		transform: translateY(-50%);
+		color: #6C6D70;
 	}
 }
 

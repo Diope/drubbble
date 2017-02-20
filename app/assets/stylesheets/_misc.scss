@@ -1,7 +1,7 @@
-.row-wrapper {
-  //@include fill-parent();
-  background-color: #EFEFEF;
-}
+// .row-wrapper {
+//   //@include fill-parent();
+//   background-color: #F4F4F4;
+// }
 
 .container {
   @include outer-container;
@@ -12,7 +12,7 @@
 
 body {
   margin: 0 0 0 0;
-  background-color: #EFEFEF;
+  background-color: #F4F4F4;
 }
 
 fieldset img {

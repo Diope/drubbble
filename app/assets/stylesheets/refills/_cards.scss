@@ -74,7 +74,10 @@
     color: #BBBBBB;
     line-height: 1em;
     padding: 1.5em ($base-spacing / 2) .5em ($base-spacing /2);
-
+    li {
+      display: inline;
+      margin-left: 8px;
+    }
   }
 
   &:focus,

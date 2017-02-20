@@ -3,28 +3,41 @@
     <small>by <%= link_to "#{@post.user.username}", profile_path(@post.user) %> <%= @post.created_at.strftime('%b %d, %Y') %></small> <% if @post.user == current_user %>| <%= link_to "Edit", edit_post_path %><% end %>
 </div>
 
-<div class="post_image">
-  <%= image_tag @post.userShot %>
+<div class="post_wrap">
+
+  <div class="post_wrap_inner">
+    <div class="post_image">
+      <%= image_tag @post.userShot %>
+    </div>
+
+    <div class="tagging_wrapper">
+    <h2><%= fa_icon "tags" %> Tags</h2>
+      <% @post.tags.each do |tag| %>
+        <div class="post_tag"><%= link_to tag.name, tag_path(tag) %></div>
+      <% end %>
+    </div>
+  </div>
+
+   <div class="post_content">
+    <p>
+      <%= @post.content %>
+    </p>
+  </div>
+
 </div>
 
-<div class="post_content">
-  <p>
-    <%= @post.content %>
-  </p>
-</div>
 
-<div class="post_tags">
-  <% @post.tags.each do |tag| %>
-    <%= link_to tag.name, tag_path(tag) %>
-  <% end %>
-</div>
+<div class="post_responses">
+    
+    <div class="comment_count">
+      <h2><%= pluralize(@post.comments.count, "Response") %></h2>
+      <hr>
+    </div>
 
-<div class="response">
-  <h2><%= pluralize(@post.comments.count, "Response") %></h2>
-  <hr>
+    <div class="user_comments">
+      <%= render @post.comments %>
+      <% if user_signed_in? %>
+        <%= render "comments/form" %>
+      <% end %>
+    </div>
 </div>
-
-  <%= render @post.comments %>
-  <% if user_signed_in? %>
-    <%= render "comments/form" %>
-  <% end %>

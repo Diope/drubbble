@@ -10,6 +10,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
+
 gem 'bourbon'
 gem 'neat'
 gem 'devise'
@@ -18,6 +19,7 @@ gem "paperclip", "~> 4.3"
 gem 'thin', '~> 1.6.3'
 gem 'font-awesome-rails', '~> 4.3.0.0'
 gem 'will_paginate', '~> 3.0.7'
+gem 'ransack'
 
 group :development, :test do
   gem 'byebug'

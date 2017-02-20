@@ -18,7 +18,7 @@ class CommentsController < ApplicationController
       end
     else
       redirect_to @post
-      flash[:error] = "You cannot submit blank data"
+      flash[:error] = "You cannot submit an empty post"
     end
   end
 
@@ -33,8 +33,8 @@ class CommentsController < ApplicationController
           redirect_to @post
       else
         redirect_to @post
-        flash[:alert] = "You are not the correct user"
-    end
+        flash[:alert] = "Sorry but you are not the correct user"
+      end
   end
 
   def destroy

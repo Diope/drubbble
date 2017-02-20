@@ -1,15 +1,19 @@
 class PostsController < ApplicationController
   before_action :find_post, except: [:new, :index, :create]
 
+
   def index
-    if params[:search]
-      @post = Post.search(params[:search])
+    if params[:q]
+      @q = Post.search(params[:q])
+      @post = @q.result.includes(:users, :comments).page(params[:page])
     else
       @post = Post.all.desc_order.page(params[:page])
     end
   end
 
   def show
+    @post = Post.find(params[:id])
+    Post.increment_counter(:view_count, @post.id)
   end
 
   def new
@@ -47,10 +51,11 @@ class PostsController < ApplicationController
   private
 
     def post_params
-      params.require(:post).permit(:title, :userShot, :content, :tag_list)
+      params.require(:post).permit(:title, :userShot, :content, :tag_line)
     end
 
     def find_post
       @post = Post.find(params[:id])
     end
+
 end

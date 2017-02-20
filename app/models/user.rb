@@ -10,10 +10,10 @@ class User < ActiveRecord::Base
   #-----------
   validates :username, presence: true, uniqueness: true
 
-  #-----------
+  #----------- Membership roles
   enum role: [ :rookie, :pro, :admin ]
 
-  #-----------
+  #----------- Associations
   has_many :posts
   has_many :comments, dependent: :destroy
 
