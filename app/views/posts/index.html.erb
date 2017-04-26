@@ -12,19 +12,17 @@
           </div>
           <div class="card-bottom">
             <ul>
-
               <% if post.view_count > 0 %>
-                <li><%= fa_icon "eye" %> <%= post.view_count %></li>
-              <% else %>
-                <li><%= fa_icon "eye" %> 0</li>
+                    <li><%= fa_icon "eye" %> <%= post.view_count %></li>
+                  <% else %>
+                    <li><%= fa_icon "eye" %> 0</li>
               <% end %>
 
               <% if post.comments.count > 0 %>
-                <li><%= fa_icon "comment" %> <%= post.comments.count %></li>
-               <% else %>
-                <li><%= fa_icon "comment" %> 0</li>
+                    <li><%= fa_icon "comment" %> <%= post.comments.count %></li>
+                   <% else %>
+                    <li><%= fa_icon "comment" %> 0</li>
               <% end %>
-
             </ul>
           </div>
         </div>

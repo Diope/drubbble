@@ -1,7 +1,7 @@
-<h1>Posts Tagged with <%= @tag.name %></h1>
+<h1>Posts tagged with "<%= @tag.name %>"</h1>
 
 <ul>
   <% @tag.posts.each do |post| %>
-    <li><%= link_to post.title, post_path(post) %></li>
+    <li><%= link_to post.title, post_path(post) %> by <%= link_to post.user.username, profile_path(post.user) %></li>
   <% end %>
 </ul>

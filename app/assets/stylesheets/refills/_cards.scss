@@ -43,6 +43,7 @@
   .card-image {
     max-height: 150px;
     padding: .5em .5em 0 .5em;
+    overflow: hidden;
 
     img {
       @include transition (all 0.2s ease-in-out);
