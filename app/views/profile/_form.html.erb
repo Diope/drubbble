@@ -13,18 +13,17 @@
 	<%= image_tag @profile.avatar.url(:medium), class: "medium_avatar" %>
 	<%= f.file_field :avatar %>
 
-
 	<%= f.label :location %>
-  <%= f.text_field :location, placeholder: "Anywhere, US" %>
+  	<%= f.text_field :location, placeholder: "Anywhere, US" %>
 
 	<%= f.label :twitter %>
 	<%= f.text_field :twitter, placeholder: "@username" %>
 
 	<%= f.label :website %>
-  <%= f.text_field :website, placeholder: "http://" %>
+  	<%= f.text_field :website, placeholder: "Your site here" %>
 
 	<%= f.label "Bio" %>
-  <%= f.text_field :tagline %>
+  	<%= f.text_field :tagline %>
 	<span><%= f.check_box :available %><%= f.label :available, "For Hire?" %></span>
 
   <%= f.submit "Update Profile" %>

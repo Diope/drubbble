@@ -1,8 +1,8 @@
 <script src="app/assets/javascripts/characterCount.js"></script>
+<!-- I can generalize the 'shared/_error_message so that it's used here-->
 <%= form_for @post do |f| %>
 	<% if @post.errors.any? %>
-		<h3><%= pluralize(@post.errors.count, "Error") %> Prevents this post from being saved</h3>
-
+		<h3><%= pluralize(@post.errors.count, "Error") %> Prevents this shot from being saved</h3>
 		<ul>
 			<% @post.errors.full_messages.each do |msg| %>
 			<li><%= msg %></li>
@@ -21,6 +21,6 @@
 	<%= f.label :tag_list %>
 	<%= f.text_field :tag_list %>
 
-	<%= f.submit "Submit" %>
+	<%= f.submit yield(:button_text) %>
 
 <% end %>
