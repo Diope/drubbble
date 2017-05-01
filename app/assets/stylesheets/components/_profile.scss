@@ -69,3 +69,19 @@ li.follower_content {
     @include reset-display;
   }
 }
+
+// Profile Edit Page
+
+.hire_checkbox {
+  label {
+    display: block;
+    padding-left: 10px;
+    white-space: nowrap;
+  }
+  input[type=checkbox] {
+    vertical-align: middle;
+    float: left;
+    top: 2px;
+    position: relative;
+  }
+}

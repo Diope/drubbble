@@ -23,8 +23,10 @@
   	<%= f.text_field :website, placeholder: "Your site here" %>
 
 	<%= f.label "Bio" %>
-  	<%= f.text_field :tagline %>
-	<span><%= f.check_box :available %><%= f.label :available, "For Hire?" %></span>
+  	<%= f.text_field :tagline, placeholder: "In 100 characters or less!" %>
+
+	<div class="hire_checkbox"><span><%= f.check_box :available %><%= f.label :available, "For Hire?" %></span></div>
+	<br>
 
   <%= f.submit "Update Profile" %>
 
