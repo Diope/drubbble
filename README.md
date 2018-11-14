@@ -9,6 +9,14 @@ I'm going to try to add as much as I can to mimic dribbble, this README will ser
 
 ## Changelog
 
+### November 13, 2018
+* Starting this all over again!
+* Start the slow and painful journey that is updating this to Rails-API on Rails 5.2
+
+It's interesting that even after 3 years of working on React, Vue, Express APIs, I still remember os much of rails workflow. It also helps that many other frameworks I've worked on/with adopted the Rails flow (Laravel/PHP), it is still weird to go back to more static frontends and the server not spitting out APIs. I will say this to my dying breath SQL DBs > NoSQL DBs!
+
+
+
 ### August 15, 2015
 * Added the ability for users to upload photos to their posts (userShot column on post model).
 * Displayed avatar on index page.

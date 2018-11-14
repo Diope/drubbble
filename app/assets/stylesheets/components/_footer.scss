@@ -38,6 +38,8 @@ html, body {
   padding: $base-spacing;
   width: 100%;
   display: inline-block;
+  position:absolute;
+  bottom:0;
 
   .footer-logo {
     margin-right: 1em;

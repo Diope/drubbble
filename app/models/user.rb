@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  after_initialize :set_default_role, :if => :new_record?
+  # after_initialize :set_default_role, :if => :new_record?
   after_create :create_profile
 
   attr_accessor :login, :tagline, :location, :website, :available, :twitter, :avatar
@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
   validates :username, presence: true, uniqueness: true
 
   #----------- Membership roles
-  enum role: [ :rookie, :pro, :admin ]
+  # enum role: [ :rookie, :pro, :admin ]
 
   #----------- Associations
   has_many :posts
@@ -29,9 +29,9 @@ class User < ActiveRecord::Base
   has_one :profile, dependent: :destroy
   accepts_nested_attributes_for :profile, allow_destroy: true
 
-  def set_default_role
-    self.role ||= :rookie
-  end
+  # def set_default_role
+  #   self.role ||= :rookie
+  # end
 
   def self.find_for_database_authentication(warden_conditions)
       conditions = warden_conditions.dup
