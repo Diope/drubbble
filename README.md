@@ -15,6 +15,7 @@ I'm going to try to add as much as I can to mimic dribbble, this README will ser
 
 It's interesting that even after 3 years of working on React, Vue, Express APIs, I still remember os much of rails workflow. It also helps that many other frameworks I've worked on/with adopted the Rails flow (Laravel/PHP), it is still weird to go back to more static frontends and the server not spitting out APIs. I will say this to my dying breath SQL DBs > NoSQL DBs!
 
+Run bundle install, then rails s
 
 
 ### August 15, 2015
