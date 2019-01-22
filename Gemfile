@@ -11,6 +11,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+
 gem 'bourbon'
 gem 'neat'
 gem 'devise'
@@ -20,6 +21,7 @@ gem 'thin', '~> 1.6.3'
 gem 'font-awesome-rails', '~> 4.3.0.0'
 gem 'will_paginate', '~> 3.0.7'
 gem 'ransack'
+gem 'rails_12factor', group: :production
 
 group :development, :test do
   gem 'byebug'
@@ -28,3 +30,5 @@ group :development, :test do
   gem 'faker', '~> 1.4.3'
   gem 'pry-rails', '~> 0.3.4'
 end
+
+ruby "2.3.4"
