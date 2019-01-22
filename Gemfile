@@ -31,4 +31,4 @@ group :development, :test do
   gem 'pry-rails', '~> 0.3.4'
 end
 
-ruby "2.5.3"
+ruby "2.5.0"
