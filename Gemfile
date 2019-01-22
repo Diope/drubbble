@@ -12,10 +12,10 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 
-gem 'bourbon', '4.2.3'
-gem 'neat', '1.7.2'
-gem 'devise', '3.5.1'
-gem 'refills', '0.1.0'
+gem 'bourbon', '~> 4.2.3'
+gem 'neat', '~> 1.7.2'
+gem 'devise', '~> 3.5.1'
+gem 'refills', '~> 0.1.0'
 gem "paperclip", "~> 4.3"
 gem 'thin', '~> 1.6.3'
 gem 'font-awesome-rails', '~> 4.3.0.0'
